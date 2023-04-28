@@ -1,4 +1,10 @@
-@import url('https://github.com/organization/MinimapBE/raw/master/Minimap%20Script%20ResourcePack/experimental_ui/fonts/Minecraft%20Five%20Bold.otf');
+@font-face {
+    font-family: 'Minecraft Five Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://github.com/organization/MinimapBE/blob/master/Minimap%20Script%20ResourcePack/experimental_ui/fonts/Minecraft%20Five%20Bold.otf) format('otf');
+  }
 
 :root {
     --bgColor: #223344;
