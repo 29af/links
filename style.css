@@ -19,17 +19,18 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
-	background: -webkit-linear-gradient(140deg, #132d43,#161b21);
-	background: linear-gradient(140deg, #132d43,#161b21);
-    /*background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
-    /* background-image: url('https://bit.ly/3nFVqJh'); */
-    opacity: 0;
+	/* background: -webkit-linear-gradient(140deg, #132d43,#161b21);
+	/* background: linear-gradient(140deg, #132d43,#161b21);
+    /* background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%); */
+    background-image: url(winter-2023.png);	*/
+    opacity: 1;
     animation: 1s ease-in var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
+
 
 #profilePicture, #profilePicture img {
     position: relative;
@@ -74,20 +75,20 @@ body {
     margin-bottom: 10px;
     padding: 10px; /* 17px */
     text-decoration: none;
-    /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
+    /*transition: all .25s cubic-bezier(.08, .59, .29, .99); */
     -webkit-tap-highlight-color: transparent;
 }
 
 @media (hover: hover) {
     .link:hover {
         background-color: var(--accentColor);
-        color: var(--bgColor);
+        color: #161b25;
     }
 }
 
 .link:active {
     background-color: var(--accentColor);
-    color: var(--bgColor);
+    color: #161b25;
 }
 
 #hashtag {
@@ -108,7 +109,7 @@ body {
     animation: animate 10s linear var(--delay) infinite;
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-fill-color: rgba(255, 255, 255, 0); */
 }
 
 
@@ -154,7 +155,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(22, 27, 37, 0.9);
     z-index: 2;
     visibility: hidden;
     opacity: 0;
@@ -174,10 +175,10 @@ body {
     width: auto;
     height: auto;
     margin: 56px;
-    background-color: var(--bgColor);
+    background-color: #0d2f49;
     /* transform: rotate(32deg); */
     transform: scale(0);
-    transition: .5s ease-in-out;
+    transition: .1s ease-in-out;
 }
 
 .popup-quote {
@@ -222,7 +223,7 @@ body {
     font-size: 1.7rem;
     font-weight: 400;
     border-radius: 100%;
-    background-color: var(--bgColor);
+    background-color: #161b25;
     z-index: 4;
     color: var(--accentColor);
     line-height: 2.7rem;
@@ -235,13 +236,13 @@ body {
 @media (hover: hover) {
     .popup-close:hover {
         background-color: var(--accentColor);
-        color: var(--bgColor);
+        color: #161b25;
     }
 }
 
 .popup-close:active {
     background-color: var(--accentColor);
-    color: var(--bgColor);
+    color: #161b25;
 }
 
 
