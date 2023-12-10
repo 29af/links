@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'Minecraft Five Bold';
+    font-family: "Unbounded";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(https://github.com/organization/MinimapBE/blob/master/Minimap%20Script%20ResourcePack/experimental_ui/fonts/Minecraft%20Five%20Bold.otf) format('otf');
+    src: url(Unbounded-Regular.ttf);
   }
 
 :root {
-    --bgColor: #223344;
-    --bgColor2: #090a0f;
+	--bgColor: rgba(255, 255, 255, 0);
+	--bgColor2: #161b21;
     --accentColor: #FFF;
-    --font: 'Minecraft Five Bold', sans-serif;
-    --delay: .3s;
+    --font: "Unbounded";
+    --delay: .90s;
 }
 
 body {
@@ -19,10 +19,12 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
-    background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
+	background: -webkit-linear-gradient(140deg, #132d43,#161b21);
+	background: linear-gradient(140deg, #132d43,#161b21);
+    /*background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
     /* background-image: url('https://bit.ly/3nFVqJh'); */
     opacity: 0;
-    animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
+    animation: 1s ease-in var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
     background-repeat: no-repeat;
     background-size: cover;
@@ -103,7 +105,7 @@ body {
     background: linear-gradient(90deg, var(--bgColor), var(--accentColor), var(--bgColor));
     background-repeat: no-repeat;
     background-size: 80%;
-    animation: animate 3s linear var(--delay) infinite;
+    animation: animate 10s linear var(--delay) infinite;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
@@ -179,7 +181,7 @@ body {
 }
 
 .popup-quote {
-    font-family : Baskerville, Georgia, serif;
+    font-family : Unbounded;
     font-style : italic;
     position: flex;
     color: var(--accentColor);
@@ -245,7 +247,7 @@ body {
 
 /*-----------------------parallax-----------------------*/
 /* credits: https://www.youtube.com/watch?v=aywzn9cf-_U */
-#stars1 {
+/* #stars1 {
     width: 1px;
     height: 1px;
     background: transparent;
