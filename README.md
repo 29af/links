@@ -20,7 +20,7 @@
 ---
 
 <p align="center">
-  <img alt="screenshot" src="screenshot.png">
+  <img alt="screenshot" src="./demo.png">
 </p>
 
 ---
