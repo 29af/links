@@ -9,6 +9,7 @@
 :root {
 	--bgColor: rgba(255, 255, 255, 0);
 	--bgColor2: #161b21;
+    --shad: #59abf5;
     --accentColor: #FFF;
     --font: "Unbounded";
     --delay: .90s;
@@ -84,13 +85,14 @@ body {
 @media (hover: hover) {
     .link:hover {
         background-color: rgba(255, 255, 255, 0.05);
-		filter: drop-shadow(0 0 5px #59abf5);
+		filter: drop-shadow(0 0 5px var(--shad));
     }
 }
 
 .link:active {
-	background-color: var(--accentColor);
-    color: #161b25;
+	background-color: rgba(255, 255, 255, 0.2);
+    color: #ffff;
+    filter: drop-shadow(0 0 5px var(--shad));
 }
 
 #hashtag {
