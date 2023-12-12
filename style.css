@@ -1,9 +1,8 @@
 @font-face {
     font-family: "Unbounded";
     font-style: normal;
-    font-weight: 400;
     font-display: swap;
-    src: url(Unbounded-Regular.ttf);
+    src: url(./Unbounded.ttf);
   }
 
 :root {
@@ -48,16 +47,23 @@ body {
 }
 
 #userName {
+	cursor: default;
     filter: var(--glow);
     color: var(--accentColor);
-    font-size: 1rem;
-    font-weight: bold;
+    font-size: 1.2rem;
     line-height: 1.25;
     display: block;
     font-family: var(--font);
     width: 100%;
     text-align: center;
     text-decoration: none;
+		  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 #links {
@@ -68,6 +74,7 @@ body {
 }
 
 .link {
+    letter-spacing: 0.025em;
 	filter: var(--glow);
     position: relative;
     background-color: transparent;
@@ -90,7 +97,8 @@ body {
     .link:hover {
         background-color: rgba(255, 255, 255, 0.05);
         filter: var(--glowButtons);
-        letter-spacing: 0.025em;
+        letter-spacing: 0.05em;
+        font-weight: 600
     }
 }
 
@@ -98,10 +106,12 @@ body {
 	background-color: rgba(255, 255, 255, 0.2);
     color: #ffff;
     filter: var(--glowButtons);
-    letter-spacing: -0.025em;
+    letter-spacing: 0.05em;
+    font-weight: 800;
 }
 
 #hashtag {
+	cursor: default;
     filter: var(--glow);
     position: relative;
     padding-bottom: 20px;
@@ -111,6 +121,13 @@ body {
     font-family: var(--font);
     width: 100%;
     text-align: center;
+	  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 
     /*  animation   */
     overflow: hidden;
@@ -158,6 +175,7 @@ body {
 /*-------------------------popup------------------------*/
 /* credits: https://www.youtube.com/watch?v=lAS2glU0xlc */
 .overlay {
+	cursor: default;
     display: flex;
     align-items: center;
     justify-content: center;
