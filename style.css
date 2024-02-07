@@ -7,11 +7,11 @@
 
 :root {
 	--bgColor: rgba(255, 255, 255, 0);
-	--bgColor2: #161b21;
-    --shad: #b26b20;
+	--bgColor2: #211616;
+    --shad: #c2a6a6;
     --accentColor: #FFF;
     --font: "Unbounded";
-    --delay: .90s;
+    --delay: 1s;
     --glowButtons: drop-shadow(0 0 5px var(--shad)) drop-shadow(0 0 1px white);
     --glow: drop-shadow(0 0 1px white);
 }
@@ -25,7 +25,7 @@ body {
 	/*! background: -webkit-linear-gradient(140deg, #132d43,#161b21); */ /*
 	background: linear-gradient(140deg, #132d43,#161b21);
     background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%); */
-	/*! background: #000000; */
+    background: #141920;
     background-image: url(./back.png);
     opacity: 0;
     animation: 1s ease-in var(--delay) 1 transitionAnimation; 
@@ -205,7 +205,7 @@ body {
     width: auto;
     height: auto;
     margin: 56px;
-    background-color: #12314b;
+    background-color: #311516;
     /*transform: rotate(45deg); */
     transform: scale(0);
     transition: 0.5s ease-in-out;
@@ -252,7 +252,7 @@ body {
     font-size: 1.7rem;
     font-weight: 400;
     border-radius: 100%;
-    background-color: #161b25;
+    background-color: #251515;
     z-index: 4;
     color: var(--accentColor);
     line-height: 2.7rem;
@@ -267,7 +267,7 @@ body {
     .popup-close:hover {
         filter: drop-shadow(0 0 10px white);
         background-color: var(--accentColor);
-        color: #161b25;
+        color: #251616;
         transition: .2s ease-in-out;
         
     }
