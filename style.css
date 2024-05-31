@@ -1,3 +1,7 @@
+html, body {
+      overflow: auto;
+}
+
 @font-face {
     font-family: "Unbounded";
     font-style: normal;
@@ -7,8 +11,8 @@
 
 :root {
 	--bgColor: rgba(255, 255, 255, 0);
-	--bgColor2: #211616;
-    --shad: #c2a6a6;
+	--bgColor2: #781A01;
+    --shad: #B82A04;
     --accentColor: #FFF;
     --font: "Unbounded";
     --delay: 1s;
@@ -17,19 +21,15 @@
 }
 
 body {
-	/*! filter: drop-shadow(0 0 1px white); */
 	overflow: hidden;
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
-	/*! background: -webkit-linear-gradient(140deg, #132d43,#161b21); */ /*
-	background: linear-gradient(140deg, #132d43,#161b21);
-    background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%); */
     background: #141920;
-    background-image: url(./back.png);
+    background-image: url(./back.jpg);
+	background-position: center center;
     opacity: 0;
     animation: 1s ease-in var(--delay) 1 transitionAnimation; 
-    /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,13 +57,12 @@ body {
     width: 100%;
     text-align: center;
     text-decoration: none;
-		  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+		  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none; 
+            user-select: none;
 }
 
 #links {
@@ -87,7 +86,7 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
-    padding: 10px; /* 17px */
+    padding: 10px;
     text-decoration: none;
     transition: all .25s cubic-bezier(.08, .59, .29, .99);
     -webkit-tap-highlight-color: transparent;
@@ -121,20 +120,20 @@ body {
     font-family: var(--font);
     width: 100%;
     text-align: center;
-	  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+	  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+                              
 
     /*  animation   */
     overflow: hidden;
     background: linear-gradient(90deg, var(--bgColor), var(--accentColor), var(--bgColor));
     background-repeat: no-repeat;
     background-size: 80%;
-    animation: animate 10s linear var(--delay) infinite;
+    animation: animate 5s linear var(--delay) infinite;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
@@ -162,15 +161,6 @@ body {
     }
 }
 
-/* @keyframes animStar {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(-2000px);
-    }
-} */
-
 
 /*-------------------------popup------------------------*/
 /* credits: https://www.youtube.com/watch?v=lAS2glU0xlc */
@@ -184,31 +174,35 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(20, 25, 32, 0.5);
-	backdrop-filter: blur(10px) saturate(40%) brightness(40%);
+    background-color: rgba(4, 4, 4, 0.6);
+	backdrop-filter: grayscale(0.6) contrast(1.2) blur(5px);
     z-index: 2;
     visibility: hidden;
     opacity: 0;
-    overflow: hidden;
+    overflow: auto;
     transition: 0.5s ease-in-out;
 }
 
 .popup {
     position: relative;
     top: -43%;
-    /* right: -100vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 400px;
-    /* max-height: 500px; */
     width: auto;
     height: auto;
     margin: 56px;
-    background-color: #311516;
-    /*transform: rotate(45deg); */
+    background-color: var(--bgColor2);
     transform: scale(0);
     transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .overlay {
+	background-color: rgba(4, 4, 4, 0.95);
+    backdrop-filter: none;
+  }
 }
 
 .popup-quote {
@@ -232,15 +226,13 @@ body {
 }
 
 .overlay:target {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .overlay:target .popup {
     transform: scale(1);
     top: 0;
-    /* right: 0; */
-    /* transform: rotate(0); */
 }
 
 .popup-close {
@@ -252,7 +244,7 @@ body {
     font-size: 1.7rem;
     font-weight: 400;
     border-radius: 100%;
-    background-color: #251515;
+    background-color: var(--bgColor2);
     z-index: 4;
     color: var(--accentColor);
     line-height: 2.7rem;
