@@ -11,8 +11,8 @@ html, body {
 
 :root {
 	--bgColor: rgba(255, 255, 255, 0);
-	--bgColor2: #781A01;
-    --shad: #B82A04;
+    --bgColor2: #12295B;
+    --shad: #1A29A6;
     --accentColor: #FFF;
     --font: "Unbounded";
     --delay: 1s;
